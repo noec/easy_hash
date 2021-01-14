@@ -1,8 +1,6 @@
 # EasyHash
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/easy_hash`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Access hash object value like it's a method.
 
 ## Installation
 
@@ -22,7 +20,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Just initialize the EasyHash::HashToObject class with the desired hash:
+
+```ruby
+hash = { person: { name: 'John', age: 20 } }
+
+easy_hash = EasyHash::HashToObject.new(hash)
+```
+Now you can access to the values of the hash like it's a method or similar to a JS object:
+
+```ruby
+easy_hash.person.name # "John"
+easy_hash.person.age # 20
+```
 
 ## Development
 
